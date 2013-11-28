@@ -16,7 +16,9 @@ exports.get = function(slug, callback) {
     err();
   client.get(slug, function(err, reply) {
     if (!reply) {
-      calback('no key found', null);
+      if (callback) {
+        calback('no key found', null);
+      }
       return;
     }
 
@@ -43,26 +45,56 @@ exports.set = function(key, obj) {
   client.set(key, JSON.stringify(obj), redis.print);
 };
 
+exports.nukeDB = function() {
+  client.flushdb();
+};
+
 exports.initData = function(filePath) {
-  fs.readFile(filePath, 'utf8', function (err,data) {
-    if (err) {
-      return console.log(err);
-    }
+  var readData = function() {
+    fs.readFile(filePath, 'utf8', function (err,data) {
+      if (err) {
+        return console.log(err);
+      }
 
-    var categories = JSON.parse(data);
-    if (!categories) {
-      return console.log(err);
-    }
+      newCategories = JSON.parse(data);
+      delVideos();
+    });
+  };
 
-    client.flushdb();
-    categories.forEach(function(category) {
+  var delVideos = function(err) {
+    client.keys("video:*", function(err, replies) {
+      async.each(replies, function(key, callback) {
+        console.log('deleting video key: ' + key);
+        client.del(key);
+        callback(null, key);
+      }, delCategories);
+    });
+  };
+
+  var delCategories = function(err) {
+    client.keys("category:*", function(err, replies) {
+      async.each(replies, function(key, callback) {
+        console.log('deleting category key: ' + key);
+        client.del(key);
+        callback(null, key);
+      }, populateDB);
+    });
+  };
+
+  var populateDB = function(err) {
+    newCategories.forEach(function(category) {
+      console.log('populating category key: ' + "category:" + category.slug );
       exports.set("category:" + category.slug, category);
       console.log(JSON.stringify(category));
       category.videos.forEach(function(video) {
-        exports.set(category.slug + ":" + video.slug, video);
+        console.log('populating video key: ' + "video:" + category.slug + ":" + video.slug);
+        exports.set("video:" + category.slug + ":" + video.slug, video);
       });
     });
-  });
+  };
+
+  var newCategories;
+  readData();
 };
 
 exports.sortByPriority = function(a, b) {

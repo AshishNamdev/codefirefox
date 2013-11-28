@@ -1,4 +1,6 @@
-var db = require('../db');
+var db = require('../db'),
+  querystring = require("querystring");
+
 
 exports.cheatsheet = function(req, res, next) {
   res.render('cheatsheet', { pageTitle: 'Cheatsheet - Code Firefox', bodyID: 'body_cheatsheet', mainTitle: 'Cheatsheet'});
@@ -53,12 +55,13 @@ exports.video = function(req, res, next) {
     return;
   }
 
-  db.get(req.params.category + ":" + req.params.video, function(err, video) {
+  db.get("video:" + req.params.category + ":" + req.params.video, function(err, video) {
     if (err) {
       res.render('notFound', { pageTitle: 'Video - Code Firefox', id: "Couldn't find video", bodyID: 'body_not_found', mainTitle: 'Video not found'});
       return;
     }
 
+    video.shareUrl = "http://twitter.com/home?status=" + encodeURIComponent(video.title + " " + req.protocol + "://" + req.get('host') + req.url + " @codefirefox")
     res.render('video', { pageTitle: video.title + ' - Code Firefox', video: video, bodyID: 'body_video', mainTitle: 'Video' });
   });
 };

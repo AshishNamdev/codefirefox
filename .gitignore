@@ -20,3 +20,9 @@ node_modules
 
 #Redis DB
 dump.rdb
+
+#Use stylus for css
+*.css
+
+#Editor
+*.swp

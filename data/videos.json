@@ -1,36 +1,71 @@
 [
   {
-    "title": "Getting ready for development",
-    "slug": "getting-setup",
+    "title": "Finding motivation for contributing to Mozilla",
+    "slug": "motivation",
     "priority": 1,
     "videos": [
       {
-        "title": "Setting up a Windows Firefox build environment",
+        "title": "What Mozilla is all about",
         "description": "",
+        "slug": "why-mozilla",
+        "youtubeid": "",
+        "priority": 2
+      },
+      {
+        "title": "Marketing yourself as a contributor",
+        "description": "",
+        "slug": "marketing-yourself",
+        "youtubeid": "",
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "title": "Getting ready for development",
+    "slug": "getting-setup",
+    "priority": 2,
+    "videos": [
+      {
+        "title": "Setting up a Windows Firefox build environment",
+        "description": "Due to some recent landings VS2012 builds are failing on Windows. As a temporary workaround please use VS2010.",
         "slug": "windows-build-env",
         "youtubeid": "SJzYZGnXE5A",
         "priority": 1
+      },
+      {
+        "title": "Setting up an OS X Firefox build environment",
+        "description": "",
+        "slug": "osx-build-env",
+        "youtubeid": "",
+        "priority": 2
+      },
+      {
+        "title": "Setting up a Linux Firefox build environment",
+        "description": "",
+        "slug": "linux-build-env",
+        "youtubeid": "GzYZVL82ZFw",
+        "priority": 3
       },
       {
         "title": "The different types of Firefox channels and repositories",
         "description": "",
         "slug": "firefox-channels",
         "youtubeid": "1ayzz81hyIE",
-        "priority": 2
+        "priority": 4
       },
       {
         "title": "Getting the Firefox source code",
         "description": "",
         "slug": "get-source-code",
         "youtubeid": "j0McmMfBIo0",
-        "priority": 3
+        "priority": 5
       },
       {
-        "title": "Getting on help on IRC",
+        "title": "Getting help on IRC",
         "description": "",
         "slug": "irc",
-        "youtubeid": "",
-        "priority": 4
+        "youtubeid": "TJIFBJy-nQ4",
+        "priority": 6
       }
     ]
   },
@@ -38,7 +73,7 @@
   {
     "title": "Building Firefox",
     "slug": "building-firefox",
-    "priority": 2,
+    "priority": 3,
     "videos": [
       {
         "title": "Introduction to mach and mach setup",
@@ -49,7 +84,7 @@
       },
       {
         "title": "Building Desktop Firefox from the source code",
-        "description": "",
+        "description": "Due to some recent landings VS2012 builds are failing on Windows. As a temporary workaround please use VS2010.",
         "slug": "building-firefox",
         "youtubeid": "uJMuBzBuCBc",
         "priority": 2
@@ -59,20 +94,20 @@
         "description": "",
         "slug": "incremental-builds",
         "youtubeid": "1ES3mTrAJ1c",
-        "priority": 3 
+        "priority": 3
       },
       {
         "title": "Adding options with a .mozconfig file and debug builds",
         "description": "",
         "slug": "mozconfig-intro",
         "youtubeid": "wg7Gyyis4Gk",
-        "priority": 4 
+        "priority": 4
       },
       {
         "title": "Using more than one .mozconfig file",
         "description": "",
-        "slug": "mozconfig-multiple",
-        "youtubeid": "",
+        "slug": "multiple-mozconfig",
+        "youtubeid": "9Do9R2v5ZEI",
         "priority": 5
       }
     ]
@@ -81,7 +116,7 @@
   {
     "title": "Getting ready to work on your first bug",
     "slug": "first-bug-setup",
-    "priority": 3,
+    "priority": 4,
     "videos": [
       {
         "title": "Creating a Bugzilla account, account settings, and permissions",
@@ -98,10 +133,10 @@
         "priority": 2
       },
       {
-        "title": "Posting a bug",
+        "title": "Posting a well written bug to Bugzilla",
         "description": "",
         "slug": "posting-bug",
-        "youtubeid": "",
+        "youtubeid": "W25iNhT8DNU",
         "priority": 3
       },
       {
@@ -117,7 +152,7 @@
   {
     "title": "Working on your first bug",
     "slug": "first-bug",
-    "priority": 4,
+    "priority": 5,
     "videos": [
       {
         "title": "Explanation of the Firefox source tree",
@@ -153,7 +188,7 @@
   {
     "title": "Landing your first patch",
     "slug": "first-patch-landed",
-    "priority": 5,
+    "priority": 6,
     "videos": [
       {
         "title": "Attaching a patch to Bugzilla and getting your first review",
@@ -163,26 +198,19 @@
         "priority": 1
       },
       {
-        "title": "Running tests through try",
-        "description": "",
-        "slug": "running-tests",
-        "youtubeid": "",
-        "priority": 2
-      },
-      {
-        "title": "Landing the patch after r+",
+        "title": "Landing the patch after r+ and integration branches",
         "description": "",
         "slug": "landing-reviewed",
         "youtubeid": "",
-        "priority": 3
+        "priority": 2
       }
     ]
   },
 
   {
-    "title": "Working on more patches",
-    "slug": "more-patches",
-    "priority": 6,
+    "title": "Working on more bugs",
+    "slug": "more-bugs",
+    "priority": 7,
     "videos": [
       {
         "title": "Introduction to Mercurial Patch Queues",
@@ -206,33 +234,76 @@
         "priority": 3
       },
       {
-        "title": "Rebasing a bitrotted patch",
+        "title": "Manually rebasing a patch that has conflicts",
         "description": "",
-        "slug": "bitrotted-patches",
-        "youtubeid": "",
+        "slug": "rebasing-patch",
+        "youtubeid": "67woYDn5DqY",
         "priority": 4
+      },
+      {
+        "title": "Importing a patch from Bugzilla and removing old patches",
+        "description": "",
+        "slug": "import-patch",
+        "youtubeid": "VNueS0ACxvc",
+        "priority": 5
+      },
+      {
+        "title": "Hacking on your patch queue internals",
+        "description": "",
+        "slug": "patch-queue-internals",
+        "youtubeid": "",
+        "priority": 6
       },
       {
         "title": "Workflow when developing with patches",
         "description": "",
         "slug": "development-workflow",
         "youtubeid": "",
-        "priority": 5
+        "priority": 7
       }
     ]
   },
 
   {
-    "title": "Becoming more efficient",
-    "slug": "more-efficient",
-    "priority": 7,
+    "title": "More information on patch files",
+    "slug": "more-on-patches",
+    "priority": 8,
     "videos": [
       {
-        "title": "Finding things in the tree fast",
+        "title": "Splitting up a patch file with hg and excluding files",
         "description": "",
-        "slug": "dxr",
-        "youtubeid": "",
+        "slug": "patch-file-splitting",
+        "youtubeid": "PYbY-ltqexs",
         "priority": 1
+      },
+      {
+        "title": "Hacking on a patch file manually",
+        "description": "",
+        "slug": "patch-file-hacking",
+        "youtubeid": "",
+        "priority": 2
+      }
+    ]
+  },
+
+  {
+    "title": "Using online tools to help productivity",
+    "slug": "more-efficient",
+    "priority": 9,
+    "videos": [
+      {
+        "title": "Searching and referencing Firefox code",
+        "description": "",
+        "slug": "dxr-referencing-code",
+        "youtubeid": "V3walfiWFPw",
+        "priority": 1
+      },
+      {
+        "title": "Using DXR to figure out how to code a feature",
+        "description": "",
+        "slug": "dxr-code-unknown-feature",
+        "youtubeid": "",
+        "priority": 2
       }
     ]
   },
@@ -240,7 +311,7 @@
   {
     "title": "Front end Firefox development",
     "slug": "front-end-tools",
-    "priority": 8,
+    "priority": 10,
     "videos": [
       {
         "title": "Introduction to the Firefox Scratchpad",
@@ -254,97 +325,135 @@
         "description": "",
         "slug": "xul-intro",
         "youtubeid": "",
-        "priority": 1
+        "priority": 2
       },
       {
         "title": "Introduction to the DOM Inspector",
         "description": "",
         "slug": "dom-inspector",
         "youtubeid": "PfnP3M759os",
-        "priority": 2
+        "priority": 3
       },
       {
-        "title": "Browser Debugging",
+        "title": "Using XPCOM and JavaScript modules (jsm)",
+        "description": "",
+        "slug": "javascript-modules",
+        "youtubeid": "",
+        "priority": 4
+      },
+      {
+        "title": "Writing JavaScript modules",
+        "description": "",
+        "slug": "javascript-modules",
+        "youtubeid": "",
+        "priority": 5
+      },
+      {
+        "title": "Writing JavaScript XPCOM objects",
+        "description": "",
+        "slug": "javascript-xpcom",
+        "youtubeid": "",
+        "priority": 6
+      },
+      {
+        "title": "Debugging front end Firefox code with the built-in debugger",
         "description": "",
         "slug": "browser-debugger",
-        "youtubeid": "",
-        "priority": 3
+        "youtubeid": "lKpVRKV4Dh0",
+        "priority": 7
       },
       {
         "title": "Profiling",
         "description": "",
         "slug": "profiling",
         "youtubeid": "",
-        "priority": 4
+        "priority": 8
       },
       {
         "title": "Introduction to XBL",
         "description": "",
         "slug": "xbl-intro",
         "youtubeid": "",
-        "priority": 2
+        "priority": 9
       }
     ]
   },
 
+  {
+    "title": "Platform development",
+    "slug": "platform-development",
+    "priority": 11,
+    "videos": [
+      {
+        "title": "Creating C++ XPCOM components",
+        "description": "",
+        "slug": "xpcom",
+        "youtubeid": "",
+        "priority": 1
+      }
+    ]
+  },
 
-
-
-
-  
   {
     "title": "Automated tests",
     "slug": "automated-tests",
-    "priority": 10,
+    "priority": 12,
     "videos": [
       {
-        "title": "Introduction to the different types of automated tests",
+        "title": "Introduction to the automated tests that run on each push",
         "description": "",
         "slug": "automated-tests-intro",
-        "youtubeid": "",
+        "youtubeid": "EmuRWW4kNyg",
         "priority": 1
       },
       {
-        "title": "Buildbot, Puhing to try, try syntax, and Tinderboxpushlog (TPBL)",
+        "title": "Try server, Buildbot, and TBPL",
         "description": "",
-        "slug": "buildbot-try-tbpl",
-        "youtubeid": "",
+        "slug": "try-buildbot-tbpl",
+        "youtubeid": "iPrm48npsUg",
         "priority": 2
       },
       {
-        "title": "Running a subset of tests and other functionality",
+        "title": "TryChooser syntax and pushing to try",
         "description": "",
-        "slug": "automated-tests-more",
+        "slug": "trychooser-syntax",
         "youtubeid": "",
         "priority": 3
+      },
+      {
+        "title": "Running tests locally",
+        "description": "",
+        "slug": "running-tests-locally",
+        "youtubeid": "",
+        "priority": 4
       },
       {
         "title": "Creating an xpcshell test",
         "description": "",
         "slug": "creating-xpcshell-tests",
         "youtubeid": "",
-        "priority": 4
+        "priority": 5
       },
       {
         "title": "Creating a basic mochitest",
         "description": "",
         "slug": "creating-mochitests",
         "youtubeid": "",
-        "priority": 5
+        "priority": 6
       },
       {
         "title": "Creating a basic reftest",
         "description": "",
         "slug": "creating-reftests",
         "youtubeid": "",
-        "priority": 6
+        "priority": 7
       },
       {
         "title": "Creating a basic browser chrome test",
         "description": "",
         "slug": "creating-browser-chrome-tests",
         "youtubeid": "",
-        "priority": 7
+        "priority": 8
       }
     ]
   },
@@ -352,7 +461,7 @@
   {
     "title": "Reviewing code",
     "slug": "reviewing-code",
-    "priority": 11,
+    "priority": 13,
     "videos": [
       {
         "title": "Becoming a reviewer",
@@ -374,13 +483,13 @@
   {
     "title": "Troubleshooting code without debugging",
     "slug": "troubleshooting-code-no-debugging",
-    "priority": 12,
+    "priority": 14,
     "videos": [
       {
-        "title": "Using hg annotate",
+        "title": "Finding out why code is the way it is, using hg annotate",
         "description": "",
         "slug": "hg-annotate",
-        "youtubeid": "",
+        "youtubeid": "v8CbpAdGP3c",
         "priority": 1
       },
       {
@@ -394,30 +503,44 @@
   },
 
   {
-    "title": "Windows C++ Debugging",
-    "slug": "windows-debugging",
-    "priority": 13,
+    "title": "Debugging C++ code",
+    "slug": "debugging",
+    "priority": 15,
     "videos": [
       {
-        "title": "Debugging your local build",
+        "title": "Debugging your local build with Visual Studio",
         "description": "",
-        "slug": "debug-local-builds",
+        "slug": "debug-local-builds-win",
         "youtubeid": "",
         "priority": 1
       },
       {
-        "title": "Introduction to different debugger windows",
+        "title": "Introduction to different debugger windows in Visual Studio",
         "description": "",
         "slug": "debugger-windows",
         "youtubeid": "",
         "priority": 2
       },
       {
-        "title": "More advanced debugging tricks",
+        "title": "More advanced debugging tricks with Visual Studio",
         "description": "",
         "slug": "advanced-debugging",
         "youtubeid": "",
         "priority": 3
+      },
+      {
+        "title": "Debugging your local build in OS X with Xcode",
+        "description": "",
+        "slug": "debug-local-builds-osx",
+        "youtubeid": "",
+        "priority": 4
+      },
+      {
+        "title": "Debugging your local builds in Linux with gdb and ddd",
+        "description": "",
+        "slug": "debug-local-builds-linux",
+        "youtubeid": "",
+        "priority": 5
       }
     ]
   },
@@ -425,7 +548,7 @@
   {
     "title": "Getting commit access",
     "slug": "commit-access",
-    "priority": 14,
+    "priority": 16,
     "videos": [
       {
         "title": "Getting commit access level 1",
@@ -447,7 +570,7 @@
   {
     "title": "Staying up to date",
     "slug": "staying-up-to-date",
-    "priority": 15,
+    "priority": 17,
     "videos": [
       {
         "title": "Staying up to date on Mozilla happenings",
